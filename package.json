@@ -1,0 +1,24 @@
+{
+  "name": "Proyecto-app-web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/DevTools-MisionTic-2022/Proyecto-app-web.git",
+  "author": "Angie-Rivera <alejandrarivera1991@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "type":"module",
+  "dependencies": {
+    "apollo-server-express": "^3.5.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "graphql": "^16.0.1",
+    "mongoose": "^6.0.13"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

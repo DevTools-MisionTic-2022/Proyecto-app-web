@@ -1,16 +1,20 @@
-//import { InscriptionModel } from '../inscripcion/inscripcion.js';
+import { InscriptionModel } from '../inscripcion/inscripcion.js';
 import { UserModel } from '../usuario/usuario.js';
 import { ProjectModel } from './proyecto.js';
-import {ModeloAvance} from '../avance/avance.js'
 
 const resolversProyecto = {
   Proyecto: {
     lider: async (parent, args, context) => {
-      console.log(parent.lider);
       const usr = await UserModel.findOne({
-        _id: parent.lider.toString(), 
+        _id: parent.lider.toString(),
       });
       return usr;
+    },
+    inscripciones: async (parent, args, context) => {
+      const inscripciones = await InscriptionModel.find({
+        proyecto: parent._id,
+      });
+      return inscripciones;
     },
   },
   Query: {
